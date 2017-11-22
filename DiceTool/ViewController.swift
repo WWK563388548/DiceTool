@@ -46,7 +46,12 @@ class ViewController: UIViewController {
         // 调用UIImageView的属性和方法, 使用UIImage()方法
         diceImageView1.image = UIImage(named: dicePicturesArray[randomDiceIndex1])
         diceImageView2.image = UIImage(named: dicePicturesArray[randomDiceIndex2])
-        
+    }
+    
+    // 实现摇一摇功能
+    // 在摇一摇手机之后, 改变骰子点数
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        updateDiceImage()
     }
 
 
